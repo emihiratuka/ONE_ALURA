@@ -1,0 +1,65 @@
+<meta charset = "UTF-8">
+<canvas width = "600" height = "400"></canvas>
+
+<script>
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	function limpaTela()
+	{
+
+		pincel.fillStyle = 'lightgray';
+		pincel.fillRect(0, 0, 600, 400);
+
+	}
+
+	var raio = 10;
+	var x = 0;
+	var y = 0;
+	var pontos = 0;
+
+	function desenhaCirculo(raio, cor) {
+
+		pincel.fillStyle = cor;
+		pincel.beginPath();
+		pincel.arc(x, y, raio, 0, 2 * Math.PI);
+		pincel.fill();
+
+	}
+
+
+
+	function desenhaAlvo()
+	{
+		limpaTela();
+		x = Math.round(Math.random() * 540);
+		y = Math.round(Math.random() * 340);
+		
+
+	    desenhaCirculo(raio + 20, 'red');
+	    desenhaCirculo(raio + 10, 'white');
+	    desenhaCirculo(raio, 'red');
+	}
+
+	setInterval(desenhaAlvo, 500);
+
+    function dispara(evento) {
+
+        var xDisparo = evento.pageX - tela.offsetLeft;
+        var yDisparo = evento.pageY - tela.offsetTop;
+
+
+        if ((xDisparo > x - raio) 
+            && (xDisparo < x + raio)
+                && (yDisparo > y - raio) 
+                    && (yDisparo < yDisparo + raio)) {
+
+        	pontos++;
+
+            alert('Acertou! Você tem ' + pontos + ' pontos.');
+        }
+    }
+
+    tela.onclick = dispara;
+
+</script>

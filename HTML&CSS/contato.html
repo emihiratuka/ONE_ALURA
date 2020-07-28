@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset = "UFT-8">
+		<title>Contato - Alura</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel = "stylesheet" href = "style.css">
+		
+	</head>
+
+	<body>
+		
+		<header>
+			<div class="caixa">
+				<h1><img src="./imagens/logo.png"> </h1>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<form>
+				<label for="nomesobrenome">Nome e Sobrenome</label>
+				<input class ="input-padrao" type="text" name="nomesobrenome">
+
+				<label for="email">E-mail</label>
+				<input class ="input-padrao" type="email" name="email">
+				
+				<label for="telefone">Telefone</label>
+				<input class ="input-padrao" type="tel" name="telefone">
+
+				<label for="mensagem">Mensagem</label>
+				<textarea class ="input-padrao" cols="70" rows="10" id="mensagem"></textarea>
+
+				<div>
+
+					<p>Como prefere o nosso contato?</p>
+
+					<label for="radio-email"><input type="radio" value="E-mail" id="radio-email" name="contato">E-mail</label>
+					
+					
+					<label for="radio-telefone"><input type="radio" value="Telefone" id="radio-telefone" name="contato">Telefone</label>
+					
+
+					<label for="radio-whatsapp"><input type="radio" value="Whatsapp" id="radio-whatsapp" name="contato">Whatsapp</label>
+				</div>
+
+				<div>
+					<p>Qual horário prefere ser atendido?</p>
+					<select>
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>
+					</select>
+				</div>
+					
+
+				<label><input type="checkbox">Gostaria de receber nossas novidades por email?</label>
+
+				<input type="submit" name="" value="Enviar Formulário">
+				
+
+
+			</form>
+
+		</main>
+
+		<footer>
+			<img src="./imagens/logo-branco.png">
+			<p id="copyright">
+				&copy; Copyright 2020 - Barbearia Alura
+			</p>
+
+		</footer>
+
+	</body>
+</html>
